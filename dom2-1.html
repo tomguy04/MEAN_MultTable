@@ -35,12 +35,18 @@
         // outer loop            
 		for(let i = 0; i<13; i++){
 			// create a row for each iteration of the outer loop
-			html_string += "<tr>";
+            html_string += "<tr>";
+            if (i > 0){
+                let firstnum = i;
+                html_string += "<td>"+firstnum+"</td>";
+            }
 			// inner loop
 			for(let j = 0; j<13; j++){
 				// calculate our number
                 let nums = i * j;
                 if (nums > 0){
+                    // let firstnum = j;
+                    // html_string += "<td>"+firstnum+"</td>";
                     // attach our table data tags around the number
                     let data = "<td>" + nums + "</td>";
                     // add it to the html
